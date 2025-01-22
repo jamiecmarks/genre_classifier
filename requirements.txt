@@ -1,1 +1,6 @@
 kagglehub
+pandas
+numpy
+matplotlib
+seaborn
+librosa

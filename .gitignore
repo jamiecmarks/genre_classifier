@@ -11,3 +11,6 @@ ipython_config.py
 
 # Environment
 genrenv
+
+# Data files
+Users/duncanjcartwright/.cache/kagglehub/datasets

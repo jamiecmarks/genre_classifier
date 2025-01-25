@@ -28,3 +28,4 @@ print("Path to dataset files:", path)
 ## Acknowledgements
 
 - [Music genre dataset](https://www.kaggle.com/andradaolteanu/gtzan-dataset-music-genre-classification)
+- [Music analysis article](https://towardsdatascience.com/music-genre-classification-with-python-c714d032f0d8)

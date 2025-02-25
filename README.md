@@ -20,6 +20,8 @@ A simple music genre classifier based off of audio features.
 pip install -r requirements.txt
 ```
 
+** NOTE: You will need to use python version <= 3.12; python 3.13 is missing one of the necessary dependancies for the librosa package **
+
 3. Download the data
 
 ```python
@@ -43,11 +45,11 @@ Feature selection can be somewhat ad-hoc, especially when multiple features desc
 
 By applying these methods, you can create a more robust and interpretable model.
 
-### PCA can cause unnecessary confusion in understanding what is actually important for a dataset. Especially because it's easy to use data transformed via PCA for both testing and training which is actually a data leak if you do PCA based on all of the data. However, if you don't use all the data PCA can underexaggerate important features of that data. It seems therefore that PCA is most useful for the purpose of visualization.
+### Observations
 
-### In other KNN examples I saw people obtain the optimal K using all the data. This is a large oversight and should be very intentionally avoided as it is a clear data leak which then overexaggerates the test accuracy of these models. A similar data leak also tends to happen in normalization when the scaler is fitted on all of the data instead of just the training data, and it is then used to fit all the data. This is using data that you shouldn't have access to in training.
+PCA can cause unnecessary confusion in understanding what is actually important for a dataset. Especially because it's easy to use data transformed via PCA for both testing and training which is actually a data leak if you do PCA based on all of the data. However, if you don't use all the data PCA can underexaggerate important features of that data. It seems therefore that PCA is most useful for the purpose of visualization.
 
-
+In other KNN examples I saw people obtain the optimal K using all the data. This is a large oversight and should be very intentionally avoided as it is a clear data leak which then overexaggerates the test accuracy of these models. A similar data leak also tends to happen in normalization when the scaler is fitted on all of the data instead of just the training data, and it is then used to fit all the data. This is using data that you shouldn't have access to in training.
 
 ## Acknowledgements
 
